@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jibun"
+version = "1.1.0"
+description = "Senior Dev Learning Companion CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "parthanahallirehaan" }]
+dependencies = [
+    "click>=8.1",
+    "colorama>=0.4.6",
+    "python-dotenv>=1.0",
+    "watchdog>=4.0",
+    "groq>=0.11",
+]
+
+[project.scripts]
+jibun = "jibun.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jibun*"]
